@@ -1,0 +1,15 @@
+{
+  "name": "ne-associations",
+  "version": "1.0.0",
+  "main": "src/associations.mjs",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "Brielle Harrison",
+  "license": "MIT",
+  "description": "Small associations library",
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Associations</h1>
+    <p>
+      The number 42, will have the association to an object that
+      has the properties: <i>title</i>, <i>type</i>.
+
+      To access this object's properties, use
+      <code>
+        associated(42). title
+        associated(42). type
+      </code>
+
+      <b>title</b>&nbsp;<span id="title"></span>
+      <b>type</b>&nbsp;<span id="type"></span>
+    </p>
+
+    <script type="module">
+      const { associate, associated } = await import('../src/associations.mjs')
+
+      associate({ 
+        title: 'The Hitchhikers Guide to the Galaxy', 
+        type: 'Book'
+      }, 42);
+
+      let object = associated(42)
+      document.querySelector('#title').innerHTML = object.title
+      document.querySelector('#type').innerHTML = object.type
+    </script>
+  </body>
+</html>
+      
