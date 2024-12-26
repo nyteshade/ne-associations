@@ -10,17 +10,14 @@ off and build a more complete solution. Associations can help with that.
 const user = 'nyteshade'
 const repo = 'ne-associations'
 const script = '/src/associations.mjs'
-const src = 'https://cdn.jsdelivr.net/gh/${user}/${repo}${script}'
 
-const {
-  associate, associated, associtiaion,
-  kAllKeys, kDefaultKey
-} = await import(src)
+const Associations = await import('https://cdn.jsdelivr.net/gh/${user}/${repo}${script}');
+const { associate, associated, association } = Associations;
 
 Object.assign(globalThis, {
   associate, associated, associtiaion,
   kAllKeys, kDefaultKey
-})
+});
 ```
 
 ## Basic usage
